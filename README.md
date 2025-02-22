@@ -226,7 +226,14 @@ const config = {
       changefreq: config.changefreq,
       priority: config.priority,
       lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
-      images: [{ loc: 'https://example.com/image.jpg' }],
+      images: [{ loc: { href: 'https://example.com/image.jpg' } }],
+      videos: [{
+        thumbnailLoc: { href: 'https://example.com/image.jpg' },
+        title: `Video title`,
+        description: `Video description`,
+        contentLoc: { href: 'https://example.com/video.mp4' },
+        publicationDate: new Date().toISOString(),
+      }],
       news: {
         title: 'Article 1',
         publicationName: 'Google Scholar',
